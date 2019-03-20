@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+
+ {% block content %}
+
+ <div class="contain">
+	 <br>
+	 <div class="container">
+		 <img src="{{ api.Poster }}" class="movie-poster" alt="">
+		 <div class="dis">
+			 <h5>{{ api.Title }} <br><br>
+			     {{ api.Year }} 
+			 {{ api.Released }} <br><br>
+			 {{ api.Runtime }}
+			 {{ api.Genre }}<br><br>
+			 Director: {{ api.Director }}
+			 Writer: {{ api.Writer }}<br><br>
+			 Actors: {{ api.Actors }}<br><br>
+			 Plot: {{ api.Plot }}</h5>
+
+			<h4>{{ api.Ratings.0.Source }} - {{ api.Ratings.0.Value }}</h4>
+			<h4>{{ api.Ratings.1.Source }} - {{ api.Ratings.1.Value }}</h4>
+			<h4>{{ api.Ratings.2.Source }} - {{ api.Ratings.2.Value }}</h4>
+		</div>
+	</div>
+</div>
+
+
+
+  {% endblock %}
